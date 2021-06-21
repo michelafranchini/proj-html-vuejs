@@ -74,32 +74,32 @@ export default {
             jumbotronList : [
                 {
                     title: "how to take better concert pictures in 30 seconds", 
-                    link: "../assets/images/blog-46.jpg", 
+                    link: require("../assets/images/blog-46.jpg"), 
                     tag: "photography", 
                 },
                 {
                     title: "gadgets taht make your smartphone even smarter", 
-                    link: "../assets/images/blog-47.jpg", 
+                    link: require("../assets/images/blog-47.jpg"), 
                     tag: "gadgets", 
                 },
                 {
                     title: "20 top-rated tourist attractions in manhattan", 
-                    link: "../assets/images/blog-48.jpg", 
+                    link: require("../assets/images/blog-48.jpg"), 
                     tag: "travel", 
                 },
                 {
                     title: "the best way to ride a motorcycle", 
-                    link: "../assets/images/blog-49.jpg", 
+                    link: require("../assets/images/blog-49.jpg"), 
                     tag: "lifestyle", 
                 },
                 {
                     title: "5 fun things to do al the beach", 
-                    link: "../assets/images/blog-50.jpg", 
+                    link: require("../assets/images/blog-50.jpg"), 
                     tag: "travel", 
                 },
                 {
                     title: "amazingly fresh fruit and herb drinks for summer", 
-                    link: "../assets/images/blog-51.jpg", 
+                    link: require("../assets/images/blog-51.jpg"), 
                     tag: "recipes", 
                 }, 
             ]

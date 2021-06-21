@@ -6,8 +6,7 @@
                     <p>{{article.tag}}</p>
                     <h2>{{article.title}}</h2>
                 </div>
-                <img src="../assets/images/blog-46.jpg" :alt="article.title" class="jmbimg">
-                
+                <img :src="article.link" :alt="article.title" class="jmbimg">
             </div>
         </div>
     </div>
@@ -26,7 +25,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
     .bg_grey {
         background-color: #f7f7f7;
         padding: 30px 0;
@@ -62,6 +61,7 @@ export default {
         bottom: 0;
         left: 0;
         padding: 30px;
+        z-index: 2;
     }
 
 
@@ -75,5 +75,18 @@ export default {
         height: 270px;
         margin: 20px;
         position: relative;
+        
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3);
+
+        }
+        
     }
 </style>
