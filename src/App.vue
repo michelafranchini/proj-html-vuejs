@@ -25,7 +25,17 @@ export default {
 
 <style lang="scss">
 @import './style/variables.scss';
-@import '~bootstrap/scss/bootstrap.scss' ;  
+// @import '~bootstrap/scss/bootstrap.scss' ; 
+
+#app {
+  // 
+  body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+  }
+}
 
 
 </style>

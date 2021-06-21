@@ -26,7 +26,7 @@ ul {
         list-style: none;
         text-transform: uppercase;
         cursor: pointer;
-        margin: 15px;
+        margin: 15px 40px 15px 0;
         font-weight: bold;
         color: #444444;
 
