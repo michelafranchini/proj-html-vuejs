@@ -76,31 +76,37 @@ export default {
                     title: "how to take better concert pictures in 30 seconds", 
                     link: require("../assets/images/blog-46.jpg"), 
                     tag: "photography", 
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 },
                 {
                     title: "gadgets taht make your smartphone even smarter", 
                     link: require("../assets/images/blog-47.jpg"), 
                     tag: "gadgets", 
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 },
                 {
                     title: "20 top-rated tourist attractions in manhattan", 
                     link: require("../assets/images/blog-48.jpg"), 
                     tag: "travel", 
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 },
                 {
                     title: "the best way to ride a motorcycle", 
                     link: require("../assets/images/blog-49.jpg"), 
                     tag: "lifestyle", 
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 },
                 {
                     title: "5 fun things to do al the beach", 
                     link: require("../assets/images/blog-50.jpg"), 
                     tag: "travel", 
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 },
                 {
                     title: "amazingly fresh fruit and herb drinks for summer", 
                     link: require("../assets/images/blog-51.jpg"), 
                     tag: "recipes", 
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 }, 
             ]
         }

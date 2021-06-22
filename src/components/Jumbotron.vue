@@ -3,8 +3,9 @@
         <div class="container_75">
             <div v-for="article, index in jumbotronArticle" :key="index" class="single_article">
                 <div class="text_article_jmb">
-                    <p>{{article.tag}}</p>
+                    <h4>{{article.tag}}</h4>
                     <h2>{{article.title}}</h2>
+                    <p>{{article.text}}</p>
                 </div>
                 <img :src="article.link" :alt="article.title" class="jmbimg">
             </div>
@@ -38,7 +39,7 @@ export default {
         flex-wrap: wrap;
     }
 
-    p {
+    h4 {
         display: inline-block;
         text-transform: uppercase; 
         font-size: 12px;
@@ -54,6 +55,11 @@ export default {
         font-weight: bold;
         margin: 0;
         color: white;
+    }
+
+    p {
+        display: none;
+        font-weight: bold;
     }
 
     .text_article_jmb {
@@ -75,6 +81,7 @@ export default {
         height: 270px;
         margin: 20px;
         position: relative;
+        cursor: pointer;
         
 
         &::after {
@@ -84,8 +91,12 @@ export default {
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.3);
+            background-color: rgba(0, 0, 0, 0.4);
 
+        }
+
+        &:hover p {
+            display: block;
         }
         
     }

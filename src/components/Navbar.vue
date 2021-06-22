@@ -1,10 +1,15 @@
 <template>
   <nav>
-      <ul>
-        <li v-for="list,index in item"
-      :key="index" >{{list.name}}</li>
+        <ul>
+            <li v-for="list,index in item"
+        :key="index" >{{list.name}}</li>
 
-      </ul>
+        </ul>
+
+        <div class="searchbar">
+            <input type="text">
+            <i class="fas fa-search"></i>
+        </div>
   </nav>
 </template>
 
@@ -16,6 +21,24 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    .searchbar {
+
+        display: flex;
+        align-items: center;
+
+        input {
+            height: 20px;
+            margin: 10px;
+        }
+    }
+
+}
 
 ul {
     margin: 0;

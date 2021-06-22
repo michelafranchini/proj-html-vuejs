@@ -6,7 +6,7 @@
                     <h3>about the blog</h3>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere beatae error hic sit voluptate explicabo doloribus. Nulla hic impedit esse.</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita a omnis similique quisquam ipsam odit maiores repellat corporis error molestias.</p>
-                    <a href="#">view more</a>
+                    <a href="#">view more<i class="fas fa-chevron-right"></i></a>
                 </div>
                 <div class="post">
                     <h3>recent posts</h3>
@@ -31,6 +31,10 @@
             </div>
         </div>
         <div class="bottom_footer">
+            <div class="container_75">
+                <img src="../assets/images/logo-footer.png" alt="logo footer">
+                
+            </div>
 
         </div>
     </footer>
@@ -68,6 +72,32 @@ export default {
     }
 
     p {
+        font-size: 13px;
         color: #777777;
+    }
+
+    .about {
+        width: 30%;
+        margin-right: 50px;
+
+        a {
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 13px;
+            color: white;
+
+            i {
+                font-size: 10px;
+                margin-left: 5px;
+            }
+
+            &:hover {
+                color: #0088CC;
+            }
+        }
+    }
+
+    .bottom_footer {
+        background-color: #1c2023;
     }
 </style>
