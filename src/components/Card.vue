@@ -5,10 +5,10 @@
         <div class="description">
             <div class="calendar">
                 <div class="calendar_day">
-                    <span>12</span>
+                    <span>{{card.calDay}}</span>
                 </div>
                 <div class="calendar_month">
-                    <span>JAN</span>
+                    <span>{{card.calMonth}}</span>
                 </div>
             </div>
             <div>
@@ -46,11 +46,13 @@ export default {
     .icons {
         display: flex;
         justify-content: space-between;
+        border-bottom: 1px solid #f0f0f0;
     }
 
     .icons_left {
         display: flex;
         align-items: center;
+        margin-bottom: 30px;
 
         h5 {
             margin: 0 10px;
@@ -73,6 +75,7 @@ export default {
     }
 
     h4 {
+        cursor: pointer;
         display: inline-block;
         text-transform: uppercase;
         padding: 5px 7px;

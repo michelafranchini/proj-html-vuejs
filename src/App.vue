@@ -2,7 +2,7 @@
   <div id="app">
     <Header />
 
-    <Main :tag="tags" />
+    <Main :tag="tags" :categories="tags"/>
     
     <Footer />
   </div>
@@ -87,10 +87,6 @@ export default {
 @import '~@fortawesome/fontawesome-free/css/all.min.css';
 @import "~@fontsource/montserrat/400.css";
 // @import '~bootstrap/scss/bootstrap.scss' ; 
-
-  #app {
-    
-  }
 
   body {
     font-family: 'Montserrat', sans-serif;

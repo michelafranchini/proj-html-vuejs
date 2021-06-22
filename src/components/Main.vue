@@ -9,33 +9,61 @@
         <h3>recent posts</h3>
         <Post :post="recentPosts" />
       </div>
+
+    <!-- articolo statico sulla destra dellla prima sezione del main -->
       <div class="post_section">
         <h3>featured posts</h3>
+        <div class="right_article">
+          <div class="text_article">
+            <h4>recipes</h4>
+            <h2>Tips to Help You Quickly Prepare Your Lunch</h2>
+          </div>
+          <img src="../assets/images/blog-66.jpg" alt="" class="jmbimg">
+        </div>
+        
+        <h3>featured author</h3>
+        <div class="author">
+          <img src="../assets/images/avatar.jpg" alt="" class="avatar">
+          <div>
+            <h5>John Doe</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, sapiente.</p>
+          </div>
+        </div>
       </div>
+      <!-- /articolo statico sulla destra dellla prima sezione del main -->
     </div>
 
-    <Slider :sliderTags="tag"/>
+    <!-- <Slider :sliderTags="tag"/> -->
 
-    <div class="container_75">
-      <Card :card="card"
-      v-for="card, index in cards" 
-      :key="index"
-      />
+    <div class="container_75 second_section">
+      <div>
+        <Card :card="card"
+        v-for="card, index in cards" 
+        :key="index"
+        />
+      </div>
+      <div>
+        <TwitterAside />
+      </div>
+
+
     </div>
   </main>
 </template>
 
 <script>
 import Post from '../components/Post.vue'; 
-import Slider from '../components/Slider.vue'; 
-import Card from '../components/Card.vue'
+// import Slider from '../components/Slider.vue'; 
+import Card from '../components/Card.vue'; 
+import TwitterAside from '../components/TwitterAside.vue'
 
 export default {
     name: "Main", 
     components: {
       Post, 
-      Slider, 
-      Card
+      //Slider, 
+      Card, 
+      TwitterAside
     }, 
     props: ["tag"], 
     data() {
@@ -102,7 +130,9 @@ export default {
             author: "John Doe", 
             tags: "Lifestyle, Travel", 
             comments: "12 Comments", 
-            date: "January 12, 2019"
+            date: "January 12, 2019", 
+            calDay: "12", 
+            calMonth: "JAN"
           },
           {
             url: require("../assets/images/blog-55 (1).jpg"), 
@@ -111,7 +141,9 @@ export default {
             author: "John Doe", 
             tags: "Photography, Travel", 
             comments: "12 Comments", 
-            date: "January 12, 2019"
+            date: "January 12, 2019", 
+            calDay: "12", 
+            calMonth: "JAN"
           },
           {
             url: require("../assets/images/blog-56 (1).jpg"), 
@@ -120,7 +152,9 @@ export default {
             author: "John Doe", 
             tags: "Sport, Business", 
             comments: "12 Comments", 
-            date: "January 12, 2019"
+            date: "January 12, 2019", 
+            calDay: "12", 
+            calMonth: "JAN"
           },
           {
             url: require("../assets/images/blog-58 (1).jpg"), 
@@ -129,24 +163,21 @@ export default {
             author: "John Doe", 
             tags: "Travel, Lifestyle", 
             comments: "12 Comments", 
-            date: "January 12, 2019"
+            date: "January 12, 2019", 
+            calDay: "12", 
+            calMonth: "JAN"
           },
-          // {
-          //   url: [ 
-          //     require("../assets/images/blog-13.jpg"), 
-          //     require("../assets/images/blog-16.jpg"), 
-          //     require("../assets/images/blog-20.jpg"), 
-          //     require("../assets/images/blog-23.jpg"),
-          //     require("../assets/images/blog-29.jpg"), 
-          //     require("../assets/images/blog-40.jpg")
-          //   ], 
-          //   title: "10 best travel tips after 5 years traveling the world",
-          //   text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum.",
-          //   author: "John Doe", 
-          //   tags: "Travel, Lifestyle", 
-          //   comments: "12 Comments", 
-          //   date: "January 12, 2019"
-          // },
+          {
+            url: require("../assets/images/blogmix.png"), 
+            title: "10 best travel tips after 5 years traveling the world",
+            text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum.",
+            author: "John Doe", 
+            tags: "Travel, Lifestyle", 
+            comments: "12 Comments", 
+            date: "January 8, 2019", 
+            calDay: "8", 
+            calMonth: "JAN"
+          },
         ]
       }
     }
@@ -160,6 +191,27 @@ export default {
 
     .post_section {
       width: 30%;
+      
+      h4 {
+        display: inline-block;
+        text-transform: uppercase; 
+        font-size: 12px;
+        padding: 5px;
+        border-radius: 3px;
+        background-color: #0088cc;
+        color: white;
+    }
+
+    h2 {
+        text-transform: capitalize;
+        font-size: 17px; 
+        font-weight: bold;
+        margin: 0;
+        color: white;
+    }
+    .jmbimg {
+        width: 100%;
+    }
     }
     h3 {
       color: black;
@@ -168,6 +220,34 @@ export default {
   }
 
   .first_section {
+    display: flex;
+    justify-content: space-between;
+  }
+  .right.article {
+    position: relative;
+  }
+  .text_article {
+    position: absolute;
+    padding: 10px;
+  }
+
+  .author {
+    display: flex;
+    .avatar {
+      width: 100px;
+      margin-right: 30px;
+    }
+    h5 {
+      margin: 5px 0 10px 0;
+      font-size: 17px;
+    }
+    p {
+      line-height: 25px;
+    }
+    
+  }
+
+  .second_section {
     display: flex;
   }
 </style>

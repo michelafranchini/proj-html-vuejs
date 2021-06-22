@@ -27,6 +27,12 @@
                 </div>
                 <div class="tags">
                     <h3>categories</h3>
+                    <ul>
+                        <li v-for="categorie, index in categories"
+                        :key="index">
+                            {{categorie.tag}}
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -42,7 +48,8 @@
 
 <script>
 export default {
-    name: "Footer"
+    name: "Footer", 
+    props: ["categories"]
 }
 </script>
 
