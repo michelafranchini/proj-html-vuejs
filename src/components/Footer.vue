@@ -1,16 +1,23 @@
 <template>
     <footer>
         <div class="bg_dark">
+            <!-- label blu sopra footer -->
             <div class="label">
                 <h2>get in touch</h2>
             </div>
+            <!-- /label blu sopra footer -->
+
+            <!-- footer in alto -->
             <div class="container_75 top_footer">
+                <!-- colonna about -->
                 <div class="about">
                     <h3>about the blog</h3>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere beatae error hic sit voluptate explicabo doloribus. Nulla hic impedit esse.</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita a omnis similique quisquam ipsam odit maiores repellat corporis error molestias.</p>
                     <a href="#">view more<i class="fas fa-chevron-right"></i></a>
                 </div>
+
+                <!-- colonna post -->
                 <div class="post">
                     <h3>recent posts</h3>
                     <div class="single_post">
@@ -20,6 +27,7 @@
                             <p>12:53 AM Dec 19th</p>
                         </div>
                     </div>
+
                     <div class="single_post">
                         <img src="../assets/images/our-office-5-square.jpg" alt="">
                         <div class="text_post">
@@ -28,6 +36,8 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- colonna con commenti e foto -->
                 <div class="comments">
                     <h3>recent comments</h3>
                     <div class="comment">
@@ -45,6 +55,8 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- colonna con i tag delle categorie -->
                 <div class="tags">
                     <h3>categories</h3>
                     <ul>
@@ -55,7 +67,10 @@
                     </ul>
                 </div>
             </div>
+            <!-- /footer in alto -->
         </div>
+
+        <!-- bottom footer con logo -->
         <div class="bottom_footer">
             <div class="container_75">
                 <div class="bottom_footer_left">

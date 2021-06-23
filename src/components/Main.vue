@@ -46,6 +46,7 @@
         />
 
       </div>
+      <!-- contatore pagine -->
       <div class="counter_page">
           <div class="page">
             <i class="fas fa-chevron-left"></i>
@@ -63,6 +64,8 @@
             <i class="fas fa-chevron-right"></i>
           </div>
       </div>
+      <!-- /contatore pagine -->
+
       <div>
         <TwitterAside />
       </div>

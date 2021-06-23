@@ -1,5 +1,6 @@
 <template>
   <header>
+        <!-- top header con sfondo blu -->
         <div class="bg_blue">
             <div class="container_75">
                 <div class="top_header">
@@ -13,17 +14,27 @@
                 </div>
             </div>
         </div>
+        <!-- /top header con sfondo blu -->
+
+        <!-- logo -->
         <div class="logo_container">
             <div class="container_75">
                 <img src="../assets/images/logo-default-slim.png" alt="">
             </div>
         </div>
+        <!-- /logo -->
+
+        <!-- navbar -->
         <div class="container_75">
             <Navbar :item="navbar"/>
         </div>
+        <!-- /navbar -->
+
+        <!-- jumbotron contentente gli articoli -->
         <div>
             <Jumbotron :jumbotronArticle="jumbotronList"/>
         </div>
+        <!-- /jumbotron contentente gli articoli -->
 
   </header>
 </template>
