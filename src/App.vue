@@ -2,9 +2,9 @@
   <div id="app">
     <Header />
 
-    <Main :tag="tags" :categories="tags"/>
+    <Main :tag="tags"/>
     
-    <Footer />
+    <Footer :categories="tags"/>
   </div>
 </template>
 

@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@fontsource/montserrat": "^4.4.5",
+    "@fontsource/shadows-into-light": "^4.4.5",
     "@fortawesome/fontawesome-free": "^5.15.3",
     "bootstrap": "^5.0.1",
     "core-js": "^3.6.5",
