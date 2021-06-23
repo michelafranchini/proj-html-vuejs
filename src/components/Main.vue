@@ -1,6 +1,7 @@
 <template>
   <main>
     <div class="container_75 first_section">
+      <!-- sezione con la lista dei post recent e popular -->
       <div class="post_section">
         <h3>popular posts</h3>
         <Post :post="popularPosts"/>
@@ -9,6 +10,7 @@
         <h3>recent posts</h3>
         <Post :post="recentPosts" />
       </div>
+      <!-- /sezione con la lista dei post recent e popular -->
 
     <!-- articolo statico sulla destra dellla prima sezione del main -->
       <div class="post_section">
@@ -33,27 +35,45 @@
       <!-- /articolo statico sulla destra dellla prima sezione del main -->
     </div>
 
-    <!-- <Slider :sliderTags="tag"/> -->
+    <Slider :sliderTags="tag"/>
 
+    <!-- sezione con i vari articoli dle blog -->
     <div class="container_75 second_section">
       <div>
         <Card :card="card"
         v-for="card, index in cards" 
         :key="index"
         />
+
+      </div>
+      <div class="counter_page">
+          <div class="page">
+            <i class="fas fa-chevron-left"></i>
+          </div>
+          <div class="page">
+            <p>1</p>
+          </div>
+          <div class="page">
+            <p>2</p>
+          </div>
+          <div class="page">
+            <p>3</p>
+          </div>
+          <div class="page">
+            <i class="fas fa-chevron-right"></i>
+          </div>
       </div>
       <div>
         <TwitterAside />
       </div>
-
-
     </div>
+    <!-- /sezione con i vari articoli dle blog -->
   </main>
 </template>
 
 <script>
 import Post from '../components/Post.vue'; 
-// import Slider from '../components/Slider.vue'; 
+import Slider from '../components/Slider.vue'; 
 import Card from '../components/Card.vue'; 
 import TwitterAside from '../components/TwitterAside.vue'
 
@@ -61,7 +81,7 @@ export default {
     name: "Main", 
     components: {
       Post, 
-      //Slider, 
+      Slider, 
       Card, 
       TwitterAside
     }, 
@@ -214,6 +234,8 @@ export default {
     }
     }
     h3 {
+      text-transform: uppercase;
+      font-size: 15px;
       color: black;
     }
     
@@ -222,19 +244,34 @@ export default {
   .first_section {
     display: flex;
     justify-content: space-between;
+    margin-top: 50px; 
+    margin-bottom: 50px;
   }
-  .right.article {
+  .right_article {
     position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 98%;
+        background-color: rgba(0, 0, 0, 0.4);
+
+        }
   }
   .text_article {
     position: absolute;
+    bottom: 10px;
     padding: 10px;
+    z-index: 2;
   }
 
   .author {
     display: flex;
     .avatar {
-      width: 100px;
+      width: 130px;
       margin-right: 30px;
     }
     h5 {
@@ -242,12 +279,48 @@ export default {
       font-size: 17px;
     }
     p {
-      line-height: 25px;
+      line-height: 20px;
+      font-size: 13px;
+      color: #888888;
     }
     
   }
 
   .second_section {
-    display: flex;
+    display: flex; 
+    position: relative;
+    margin-top: 50px; 
+    margin-bottom: 50px; 
   }
+
+  .counter_page {
+    display: flex;
+    width: 150px;
+    height: 30px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(-252%, 39%);
+    color: #0088cc;
+
+    .page {
+      display: flex;
+      justify-content: center;
+      align-items: center; 
+      cursor: pointer;
+      width: 30px; 
+      border: 1px solid #f0f0f0;
+
+      &:hover {
+        color: white;
+        background-color: #0088cc;
+      }
+
+      p {
+        margin: 0; 
+      }
+    }
+  }
+
+  
 </style>

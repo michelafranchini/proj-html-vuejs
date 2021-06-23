@@ -68,6 +68,7 @@ export default {
 
 <style lang="scss" scoped>
         h3 {
+            font-size: 15px;
             text-transform: uppercase;
             color: black;
         }
@@ -83,6 +84,7 @@ export default {
                     color: #7d7d7d;
                 }
                 p {
+                    font-size: 11px;
                     font-weight: bold;
                     color: #0088cc;
                 }

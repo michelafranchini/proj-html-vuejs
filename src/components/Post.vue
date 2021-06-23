@@ -30,7 +30,12 @@ export default {
     }
     h4 {
         font-size: 13px;
+        cursor: pointer;
         color: #212529;
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
     p {
         font-size: 10px;

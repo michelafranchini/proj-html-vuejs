@@ -37,7 +37,7 @@ export default {
 <style lang="scss" scoped>
     .card_container {
         width: 1050px;
-        margin: 50px 0;
+        margin-bottom: 50px ;
     }
     img {
         width: 1050px;
@@ -70,8 +70,14 @@ export default {
     }
 
     h2 {
+        cursor: pointer;
         text-transform: capitalize;
         margin: 0;
+
+        &:hover {
+            text-decoration: underline;
+            color: #0088cc;
+        }
     }
 
     h4 {
@@ -83,6 +89,11 @@ export default {
         border: 1px solid #888888;
         border-radius: 5px;
         color: #888888;
+
+        &:hover {
+            border-color: #0088cc;
+            color: #0088cc;
+        }
     }
 
     .calendar {

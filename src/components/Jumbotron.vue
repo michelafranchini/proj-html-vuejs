@@ -36,6 +36,7 @@ export default {
         width: 75%;
         margin: auto;
         display: flex;
+        justify-content: space-between;
         flex-wrap: wrap;
     }
 
@@ -60,6 +61,8 @@ export default {
     p {
         display: none;
         font-weight: bold;
+        font-size: 13px;
+        color: #b7b7b7;
     }
 
     .text_article_jmb {
@@ -77,9 +80,9 @@ export default {
     }
 
     .single_article {
-        width: 30%; 
+        width: 32%; 
         height: 270px;
-        margin: 20px;
+        margin-bottom: 30px;
         position: relative;
         cursor: pointer;
         
